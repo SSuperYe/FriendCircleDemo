@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_bg"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/EighteenNormalText"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/img_head"
+            android:layout_marginRight="@dimen/dp_five"
+            android:layout_toLeftOf="@+id/img_head"
+            android:text="SuperYe" />
+
+        <ImageView
+            android:id="@+id/img_head"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_fifteen"
+            android:background="@drawable/round_one_stroke_grey_solid_black"
+            android:padding="3dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher_round" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/layout_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/round_one_stroke_grey_solid_black"
+            android:padding="@dimen/dp_five">
+
+            <ImageView
+                android:id="@+id/img_msg_head_url"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/jz_backward_icon" />
+
+            <TextView
+                android:id="@+id/tv_msg_count"
+                style="@style/FourteenNormalText"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:layout_toRightOf="@+id/img_msg_head_url"
+                android:text="你有一条信息"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

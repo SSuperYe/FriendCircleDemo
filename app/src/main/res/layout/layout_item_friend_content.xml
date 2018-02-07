@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/dp_ten"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/SixteenNormalText"
+            android:layout_alignBaseline="@+id/iv_head"
+            android:layout_toRightOf="@+id/iv_head"
+            android:background="@drawable/selector_bar_color"
+            android:text="@string/app_name"
+            android:textColor="@color/blueDark" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/SixteenNormalText"
+            android:layout_below="@+id/tv_name"
+            android:layout_toRightOf="@+id/iv_head"
+            android:gravity="start"
+            android:text="testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest" />
+
+        <TextView
+            android:id="@+id/tv_fold"
+            style="@style/SixteenNormalText"
+            android:layout_below="@+id/tv_content"
+            android:layout_toRightOf="@+id/iv_head"
+            android:text="全文"
+            android:textColor="@color/blueLight" />
+
+        <RelativeLayout
+            android:id="@+id/layout_imgorvideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fold"
+            android:layout_toRightOf="@+id/iv_head">
+
+            <com.lzy.ninegrid.NineGridView
+                android:id="@+id/nineGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:ngv_gridSpacing="3dp"
+                app:ngv_maxSize="9"
+                app:ngv_mode="grid"
+                app:ngv_singleImageRatio="1"
+                app:ngv_singleImageSize="200dp" />
+
+            <cn.jzvd.JZVideoPlayerStandard
+                android:id="@+id/vv"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_address"
+            style="@style/FourteenNormalText"
+            android:layout_below="@+id/layout_imgorvideo"
+            android:layout_marginTop="@dimen/dp_five"
+            android:layout_toRightOf="@+id/iv_head"
+            android:text="杭州"
+            android:textColor="@color/blueLight" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/FourteenHintText"
+            android:layout_below="@+id/tv_address"
+            android:layout_marginTop="@dimen/dp_five"
+            android:layout_toRightOf="@+id/iv_head"
+            android:text="2小时前" />
+
+        <ImageView
+            android:id="@+id/img_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_address"
+            android:layout_marginTop="@dimen/dp_five"
+            android:adjustViewBounds="true"
+            android:src="@drawable/comments" />
+
+        <RelativeLayout
+            android:id="@+id/layout_like"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_time"
+            android:layout_marginTop="@dimen/dp_five"
+            android:layout_toRightOf="@+id/iv_head"
+            android:background="@color/background_main"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_five">
+
+            <ImageView
+                android:id="@+id/img_like"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/like" />
+
+            <TextView
+                android:id="@+id/tv_like"
+                style="@style/FourteenNormalText"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="start"
+                android:text="SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS"
+                android:textColor="@color/blueLight" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_rowline"
+            style="@style/HorizontalDivider"
+            android:layout_below="@+id/layout_like"
+            android:layout_toRightOf="@+id/iv_head" />
+
+        <LinearLayout
+            android:id="@+id/layout_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_rowline"
+            android:layout_toRightOf="@+id/iv_head"
+            android:background="@color/background_main"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_five" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/divider"
+        style="@style/rowLine" />
+
+</LinearLayout>
